@@ -1,9 +1,24 @@
 :root{
-    --lightColor: ;
-    --bg-light: #eee;
+    --main-color: white;
+    --default-color:#212529;
+    --bg: #eee;
+    --bg2: white;
+    --color-secondary: #ce1212;
+    --color-secondary2: #e43030;
+    --shadow: #c2c2c2;
     --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-primary: "Amatic SC", sans-serif;
-    --color-secondary: #ce1212;
+}
+.dark-themes{
+    --main-color: #151515;
+    --default-color:#fff;
+    --bg: #252525;
+    --bg2: #1b1b1b;
+    --color-secondary: #c17e1f;
+    --color-secondary2: #d3943c;
+    --shadow: #414141;
+    --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-primary: "Amatic SC", sans-serif;
 }
 *{
     padding: 0;
@@ -17,10 +32,10 @@
     margin: auto;
 }
 .header{
-    background-color: white;
+    background-color: var(--main-color);
     position: fixed;
     width: 100%;
-    box-shadow: 0 0px 3px 0 #c2c2c2;
+    box-shadow: 0 0px 3px 0 var(--shadow);
     z-index: 10;
 }
 .header .header_content{
@@ -33,7 +48,7 @@
 .header .header_content .brand a{
     padding: 5px;
     display: block;
-    color: #212529;
+    color: var(--default-color);
     font-size: 30px;
     font-weight: bold;
 }
@@ -55,34 +70,26 @@
     color: #838383;
     font-size: 18px;
     font-weight: 600;
-}
-@keyframes border{
-    0%{
-        border-bottom: white solid 3px;
-    }
-    100%{
-        border-bottom: var(--color-secondary) solid 3px;
-    }
+    transition-property: all;
+    transition-duration: 0.3s;
 }
 .header .header_content ul a:hover{
-    color: #212529;
-    animation-name: border;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-iteration-count: 1;
+    color: var(--default-color);
+    border-bottom: var(--color-secondary) solid 3px;
+    
 }
 .header .header_content ul .active{
-    color: #212529;
+    color: var(--default-color);
     border-bottom: var(--color-secondary) solid 3px;
 }
-.header .header_content .dark i{
+.header .header_content #dark i{
     font-size: 22px;
     cursor: pointer;
-    color: black;
+    color: var(--default-color);
 }
 .home{
     padding-top: 83.36px;
-    background-color: var(--bg-light);
+    background-color: var(--bg);
 }
 .home .home_content{
     height: calc(100vh - 83.36px);
@@ -96,6 +103,7 @@
 }
 .home .home_content .desc h1{
     font-family :var(--font-default);
+    color: var(--default-color);
     font-size: 40px;
 }
 .home .home_content .desc p{
@@ -109,7 +117,7 @@
     align-items: center;
 }
 .home .home_content .desc .book{
-    color: white;
+    color: var(--main-color);
     background-color: var(--color-secondary);
     font-family: var(--font-primary);
     border-radius: 0 30px 30px 30px;
@@ -119,10 +127,10 @@
     transition-property: all;
 }
 .home .home_content .desc .book:hover{
-    background-color: #e43030;
+    background-color: var(--color-secondary2);
 }
 .home .home_content .desc .watch{
-    color: black;
+    color: var(--default-color);
     font-family: var(--font-primary);
 }
 .home .home_content .desc .watch_avideo{
@@ -133,20 +141,20 @@
     background-color: white;
     padding: 15px;
     border-radius: 50%;
-    border-top: 8px solid #ce1212;
-    border-left: 8px solid #ce1212;
+    border-top: 8px solid var(--color-secondary);
+    border-left: 8px solid var(--color-secondary);
     margin-right: 10px;
 }
 .home .home_content .desc .watch_avideo:hover .watch{
-    color: #ce1212;
+    color: var(--color-secondary);
 }
 .home .home_content .desc .watch_avideo:hover i{
-    color: #ce1212;
+    color: var(--color-secondary);
 }
 .home .home_content .image{
     width: 40%;
     border-radius: 50%;
-    box-shadow: 5px 5px 20px 0 #4c4c4c;
+    box-shadow: 5px 5px 20px 0 black;
 }
 .home .home_content .image:hover{
     animation-name: move;
@@ -171,6 +179,7 @@
 }
 .chefs{
     padding-block: 15vh;
+    background-color: var(--bg2);
 }
 .chefs .chefs_content .cards{
     display: flex;
@@ -180,11 +189,12 @@
 .chefs .chefs_content .cards .card{
     text-align: center;
     border-radius: 10px;
-    box-shadow: 2px 2px 20px 0 #c9c9c9;
+    box-shadow: 2px 2px 20px 0 var(--shadow);
     overflow: hidden;
     width: calc(100%/3);
     margin: 20px;
     font-family: var(--font-primary);
+    background-color: var(--main-color);
     color: #9a9a9a;
     transition-duration: 0.5s;
     transition-property: all;
@@ -199,7 +209,7 @@
     width: 100%;
 }
 .chefs .chefs_content .cards .card h3{
-    color: black;
+    color: var(--default-color);
     padding-block: 15px;
 }
 .chefs .chefs_content .cards .card .des{
@@ -219,7 +229,7 @@
     font-family: var(--font-default);
 }
 .gallery{
-    background-color: var(--bg-light);
+    background-color: var(--bg);
     padding-block: 15vh;
 }
 .gallery .gallery_content .images{
@@ -274,6 +284,7 @@
 /*end gallery*/
 /*start contact*/
 .contact{
+    background-color: var(--bg2);
     padding-block: 15vh;
 }
 .contact .contact_content .image{
@@ -291,7 +302,7 @@
 .contact .contact_content .cards .card{
     width: calc(100%/2 - 10px);
     padding: 20px;
-    background-color: var(--bg-light);
+    background-color: var(--bg);
     font-family: var(--font-primary);
     display: flex;
     align-items: center;
@@ -299,7 +310,7 @@
 .contact .contact_content .cards .card i{
     background-color: var(--color-secondary);
     padding: 15px;
-    color: white;
+    color: var(--main-color);
     border-radius: 50%;
     margin-right: 10px;
 }
@@ -307,16 +318,20 @@
     color: #838383;
     line-height: 2;
 }
+.contact .contact_content .cards .card .info p{
+    color: var(--default-color);
+}
 .contact .contact_content .cards .card .info p span{
     font-weight: bold;
 }
 .contact .contact_content form{
     margin-top: 30px;
-    box-shadow: 0 0 15px 0 #dedddd;
+    box-shadow: 0 0 15px 0 var(--bg);
     padding: 15px;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    background-color: var(--main-color);
 }
 .contact .contact_content form .name, .email{
     padding: 15px;
@@ -338,15 +353,17 @@
     border-radius: 20px;
     padding: 15px 20px;
     background-color: var(--color-secondary);
-    color: white;
+    color: var(--main-color);
     font-family: var(--font-primary);
     text-transform: capitalize;
     margin: 20px auto;
+    cursor: pointer;
 }
 /*end contact*/
 /*start footer*/
 .footer{
     background-color: black;
+    overflow: hidden;
 }
 .footer .footer_content{
     display: flex;
@@ -421,7 +438,7 @@
     text-transform: capitalize;
 }
 .footer .footer_content .links button:hover{
-    background-color: #dd4242;
+    background-color: var(--color-secondary2);
 }
 .footer .footer_content .links .qlinks{
     margin: 20px 0 10px 0;
@@ -462,4 +479,153 @@
     color: var(--color-secondary);
     font-size: 22px;
     cursor: pointer;
+}
+
+/*media query*/
+/*sm*/
+@media (min-width: 575px) and (max-width:990px){
+    .home .home_content{
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .home .home_content .desc{
+        width: 80%;
+        text-align: center;
+    }
+    .home .home_content .image{
+        width: 80%;
+    }
+    .home .home_content .desc .btns{
+        justify-content: space-evenly;
+    }
+    .chefs .chefs_content .cards{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .chefs .chefs_content .cards .card{
+        width: 100%;
+    }
+    .gallery .gallery_content .images{
+        grid-template-columns: repeat(1,auto);
+    }
+    .contact .contact_content .cards{
+        flex-direction: column;
+    }
+    .contact .contact_content .cards .card{
+        width: 100%;
+    }
+    .footer .footer_content{
+        flex-direction: column;
+    }
+    .footer .footer_content .social{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .footer .footer_content .links{
+        width: 100%;
+        padding-inline: 0px;
+        margin-bottom: 30px;
+    }
+    .footer .footer_content .links input{
+        width: 70%;
+    }
+    .footer .footer_content .contacts{
+        width: 100%;
+    }
+}
+/*md*/
+@media (min-width: 767px) and (max-width:990px) {
+    .home .home_content{
+        margin-top: 25px;
+        padding-bottom: 15px;
+    }
+    .header .header_content .brand a{
+        font-size: 40px;
+    }
+    .header .header_content ul a{
+        font-size: 25px;
+    }
+    .header .header_content #dark i{
+        font-size: 27px;
+    }
+    .home .home_content .desc h1{
+        font-size: 55px;
+    }
+    .home .home_content .desc p{
+        font-size: 25px;
+    }
+    .home .home_content .desc .book{
+        font-size: 20px;
+    }
+    .home .home_content .desc .watch{
+        font-size: 25px;
+    }
+    .home .home_content .desc i{
+        font-size: 25px;
+        margin-right: 20px;
+    }
+    .title p{
+        font-size: 25px;
+    }
+    .title h2{
+        font-size: 35px;
+    }
+    .chefs .chefs_content .cards .card h3{
+        font-size: 30px;
+    }
+    .chefs .chefs_content .cards .card p{
+        font-size: 25px;
+    }
+    .chefs .chefs_content .cards .card .des{
+        font-size: 25px;
+    }
+    .contact .contact_content .cards .card i{
+        font-size: 30px;
+    }
+    .contact .contact_content .cards .card .info h2{
+        font-size: 30px;
+    }
+    .contact .contact_content .cards .card .info p{
+        font-size: 20px;
+    }
+    .contact .contact_content .cards .card .info p span{
+        font-size: 20px;
+    }
+    .contact .contact_content form{
+        font-size: 20px;
+    }
+    .footer .footer_content p{
+        font-size: 20px;
+    }
+    .footer .footer_content a{
+        font-size: 20px;
+    }
+    .footer .footer_content i{
+        font-size: 20px;
+    }
+    .footer .footer_content h2{
+        font-size: 30px;
+    }
+    .footer .footer_content .links input{
+        font-size: 20px;
+    }
+    .footer .footer_content .links button{
+        font-size: 20px;
+    }
+    .footer .footer_content .social .social_media i{
+        font-size: 30px;
+    }
+}
+/*lg*/
+@media (min-width: 991px) and (max-width:1199px){
+    .home .home_content .desc{
+        width: 50%;
+        line-height: 1.5;
+    }
+    .footer .footer_content .links input{
+        width: 70%;
+    }
+    
 }
