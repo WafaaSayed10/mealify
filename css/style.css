@@ -6,8 +6,6 @@
     --color-secondary: #ce1212;
     --color-secondary2: #e43030;
     --shadow: #c2c2c2;
-    --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --font-primary: "Amatic SC", sans-serif;
 }
 .dark-themes{
     --main-color: #151515;
@@ -41,7 +39,7 @@
     justify-content: space-between;
     align-items: center;
     text-transform: capitalize;
-    font-family: var(--font-default);
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 .header .header_content .brand a{
     padding: 5px;
@@ -100,12 +98,12 @@
     line-height: 1.5;
 }
 .home .home_content .desc h1{
-    font-family :var(--font-default);
+    font-family :"Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     color: var(--default-color);
     font-size: 40px;
 }
 .home .home_content .desc p{
-    font-family: var(--font-primary);
+    font-family: "Amatic SC", sans-serif;
     color: #787878;
     padding-bottom: 10px;
 }
@@ -117,7 +115,7 @@
 .home .home_content .desc .book{
     color: var(--main-color);
     background-color: var(--color-secondary);
-    font-family: var(--font-primary);
+    font-family: "Amatic SC", sans-serif;
     border-radius: 0 30px 30px 30px;
     padding: 15px 25px;
     display: block;
@@ -129,7 +127,7 @@
 }
 .home .home_content .desc .watch{
     color: var(--default-color);
-    font-family: var(--font-primary);
+    font-family: "Amatic SC", sans-serif;
 }
 .home .home_content .desc .watch_avideo{
     padding: 10px;
@@ -191,7 +189,7 @@
     overflow: hidden;
     width: calc(100%/3);
     margin: 20px;
-    font-family: var(--font-primary);
+    font-family: "Amatic SC", sans-serif;
     background-color: var(--main-color);
     color: #9a9a9a;
     transition-duration: 0.5s;
@@ -220,11 +218,11 @@
     padding-bottom: 40px;
 }
 .title p{
-    font-family: var(--font-primary);
+    font-family: "Amatic SC", sans-serif;
     color: #838383;
 }
 .title h2{
-    font-family: var(--font-default);
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 .gallery{
     background-color: var(--bg);
@@ -263,7 +261,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: var(--font-primary);
+    font-family: "Amatic SC", sans-serif;
     padding: 10px;
     text-align: center;
     transition-duration: 0.5s;
@@ -301,7 +299,7 @@
     width: calc(100%/2 - 10px);
     padding: 20px;
     background-color: var(--bg);
-    font-family: var(--font-primary);
+    font-family: "Amatic SC", sans-serif;
     display: flex;
     align-items: center;
 }
@@ -335,7 +333,7 @@
     padding: 15px;
     width: calc(50% - 10px);
     text-transform: capitalize;
-    font-family: var(--font-primary);
+    font-family: "Amatic SC", sans-serif;
     border: 2px solid #d8d8d8;
     color: #d8d8d8;
 }
@@ -343,7 +341,7 @@
     padding: 15px;
     width: 100%;
     text-transform: capitalize;
-    font-family: var(--font-primary);
+    font-family: "Amatic SC", sans-serif;
     border: 2px solid #d8d8d8;
 }
 .contact .contact_content form button{
@@ -352,7 +350,7 @@
     padding: 15px 20px;
     background-color: var(--color-secondary);
     color: var(--main-color);
-    font-family: var(--font-primary);
+    font-family: "Amatic SC", sans-serif;
     text-transform: capitalize;
     margin: 20px auto;
     cursor: pointer;
@@ -366,7 +364,7 @@
 .footer .footer_content{
     display: flex;
     color: white;
-    font-family: var(--font-primary);
+    font-family: "Amatic SC", sans-serif;
     padding-block: 30px;
 }
 .footer .footer_content .social{
