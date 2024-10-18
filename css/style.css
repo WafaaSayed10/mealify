@@ -476,9 +476,27 @@
     font-size: 22px;
     cursor: pointer;
 }
-
-/*media query*/
-/*sm*/
+@media (max-width: 575px) {
+    .header .nav{
+        display: none;
+    }
+    .home .container{
+        width: 99%;
+    }
+    .home .home_content .desc h1{
+        font-size: 25px;
+    }
+    .home .home_content .desc .book{
+        padding: 5px 10px;
+    }
+    .home .home_content .desc .watch_avideo{
+        padding: 2px;
+        margin-left: 10px;
+    }
+    .home .home_content .desc .watch_avideo i{
+        font-size: 10px;
+    }
+}
 @media (max-width:990px){
     .home .home_content{
         flex-direction: column-reverse;
