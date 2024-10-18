@@ -479,7 +479,7 @@
 
 /*media query*/
 /*sm*/
-@media (min-width: 575px) and (max-width:990px){
+@media (max-width:990px){
     .home .home_content{
         flex-direction: column-reverse;
         justify-content: space-evenly;
